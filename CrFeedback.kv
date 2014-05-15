@@ -3,38 +3,57 @@
 <ColorView>:
     Button:
         background_color:root.bcolour
+        text:root.answer_text
+        font_size:'60dp'
         on_press:root.dismiss()
 
 <MainView>:
     orientation:'vertical'
-    Button:
-        background_color:0,33,0,1
-        on_press:root.showcolor(self.background_color)
-    Button:
-        background_color:33,33,0,1
-        on_press:root.showcolor(self.background_color)
-    Button:
-        background_color:33,0,0,1
-        on_press:root.showcolor(self.background_color)
+    BoxLayout:
+        size_hint:1,0.2
+        orientation:'horizontal' 
+        TextInput:
+            size_hint:0.6,1
+            id: txt_in
+        Button:
+            size_hint:0.15,1
+            text:'->'
+            on_press:root.show_answer(self.background_color,txt_in.text,chb_stealth.active)
+        Label:
+            #size_hint:0.20,1
+            text:'hide answer'
+        CheckBox:
+            size_hint:0.05,1
+            id:chb_stealth
+            #active:False
     BoxLayout:
         orientation:'horizontal' 
         Button:
             background_color:2,2,2,1
             text:'a'
             font_size:'36dp'
-            on_press:root.showcolor(self.background_color)	
+            on_press:root.show_answer(self.background_color,self.text,chb_stealth.active)
         Button:
             background_color:2,2,2,1
             text:'b'
             font_size:'36dp'
-            on_press:root.showcolor(self.background_color)	
+            on_press:root.show_answer(self.background_color,self.text,chb_stealth.active)
         Button:
             background_color:2,2,2,1
             text:'c'
             font_size:'36dp'
-            on_press:root.showcolor(self.background_color)	
+            on_press:root.show_answer(self.background_color,self.text,chb_stealth.active)
         Button:
             background_color:2,2,2,1
             text:'d'
             font_size:'36dp'
-            on_press:root.showcolor(self.background_color)	
+            on_press:root.show_answer(self.background_color,self.text,chb_stealth.active)
+    Button:
+        background_color:0,33,0,1
+        on_press:root.show_answer(self.background_color,stealth=chb_stealth.active)
+    Button:
+        background_color:33,33,0,1
+        on_press:root.show_answer(self.background_color,stealth=chb_stealth.active)
+    Button:
+        background_color:33,0,0,1
+        on_press:root.show_answer(self.background_color,stealth=chb_stealth.active)
