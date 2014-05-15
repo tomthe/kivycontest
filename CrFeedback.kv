@@ -1,0 +1,40 @@
+#:kivy 1.0
+
+<ColorView>:
+    Button:
+        background_color:root.bcolour
+        on_press:root.dismiss()
+
+<MainView>:
+    orientation:'vertical'
+    Button:
+        background_color:0,33,0,1
+        on_press:root.showcolor(self.background_color)
+    Button:
+        background_color:33,33,0,1
+        on_press:root.showcolor(self.background_color)
+    Button:
+        background_color:33,0,0,1
+        on_press:root.showcolor(self.background_color)
+    BoxLayout:
+        orientation:'horizontal' 
+        Button:
+            background_color:2,2,2,1
+            text:'a'
+            font_size:'36dp'
+            on_press:root.showcolor(self.background_color)	
+        Button:
+            background_color:2,2,2,1
+            text:'b'
+            font_size:'36dp'
+            on_press:root.showcolor(self.background_color)	
+        Button:
+            background_color:2,2,2,1
+            text:'c'
+            font_size:'36dp'
+            on_press:root.showcolor(self.background_color)	
+        Button:
+            background_color:2,2,2,1
+            text:'d'
+            font_size:'36dp'
+            on_press:root.showcolor(self.background_color)	
