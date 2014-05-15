@@ -10,11 +10,10 @@ Every student can hold up its smartphone to signal its comprehension of the mate
 
 Let several people answer multiple-choice-questions at the same time. Hide the answer until everyone choosed one answer.
 
-
------------------------------
+Screenshots:
+http://imgur.com/a/Y15rc
 
 Requirements:
 --------------
 
-Tested with Kivy 1.8, doesn't have any other dependencies
-should work with earlier versions of Kivy.
+Tested with Kivy 1.8, doesn't have any other dependencies and should also work with earlier versions of Kivy.
